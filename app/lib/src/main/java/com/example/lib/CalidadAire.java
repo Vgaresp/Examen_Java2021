@@ -1,7 +1,9 @@
 package com.example.lib;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CalidadAire {
     // Hora local Gandia Epoch del 7.10.2021 de las 8:00 am a las 17:00 pm
@@ -12,10 +14,20 @@ public class CalidadAire {
     static int LTELEMATICA[] = {450, 500, 675, 875, 850, 700, 750, 880, 700, 600};
     static int AULA9[] = {450, 500, 550, 650, 700, 800, 750, 600, 650, 600};
 
+
     public static void main(String[] args) {
         List<MedidaCO2> medidas = new ArrayList<>();
         for(int i = 0; i < FECHA.length; i++) {
            medidas.add(new MedidaCO2(FECHA[i], LELECTRONICA[i], LTELEMATICA[i], AULA9[i]));
         }
+        Set<Integer> ppm = new HashSet<>();
+        for (MedidaCO2 medidaCO2 : medidas){//por cada lectura de la lista anyado la habitacion
+            //recorre cada lista, una lista de lecturas,
+            ppm.add(medidaCO2.getPpmAulanueve());
+            ppm.add(medidaCO2.getPpmElectronica());
+            ppm.add(medidaCO2.getPpmAulanueve());
+        }
+        System.out.println(ppm.toString());
+        System.out.println(medidas.size());
     }
 }

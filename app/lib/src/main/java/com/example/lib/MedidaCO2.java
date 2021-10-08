@@ -7,16 +7,32 @@ public class MedidaCO2 {
     private int ppmTelematica;
     private int ppmAulanueve;
 
+    public long getTiempo() {
+        return tiempo;
+    }
+
     public void setTiempo(long tiempo) {
         this.tiempo = tiempo;
+    }
+
+    public int getPpmElectronica() {
+        return ppmElectronica;
     }
 
     public void setPpmElectronica(int ppmElectronica) {
         this.ppmElectronica = ppmElectronica;
     }
 
+    public int getPpmTelematica() {
+        return ppmTelematica;
+    }
+
     public void setPpmTelematica(int ppmTelematica) {
         this.ppmTelematica = ppmTelematica;
+    }
+
+    public int getPpmAulanueve() {
+        return ppmAulanueve;
     }
 
     public void setPpmAulanueve(int ppmAulanueve) {
@@ -30,5 +46,13 @@ public class MedidaCO2 {
         this.ppmAulanueve = ppmAulanueve;
     }
 
-
+    @Override
+    public String toString() {
+        return "MedidaCO2{" +
+                "tiempo=" + tiempo +
+                ", ppmElectronica=" + ppmElectronica +
+                ", ppmTelematica=" + ppmTelematica +
+                ", ppmAulanueve=" + ppmAulanueve +
+                '}';
+    }
 }
