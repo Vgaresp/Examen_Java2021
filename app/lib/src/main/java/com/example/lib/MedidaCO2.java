@@ -1,5 +1,7 @@
 package com.example.lib;
 
+import java.util.List;
+
 public class MedidaCO2 {
     //atributos
     private long tiempo;
@@ -45,6 +47,7 @@ public class MedidaCO2 {
         this.ppmTelematica = ppmTelematica;
         this.ppmAulanueve = ppmAulanueve;
     }
+    //metodos
 
     @Override
     public String toString() {
