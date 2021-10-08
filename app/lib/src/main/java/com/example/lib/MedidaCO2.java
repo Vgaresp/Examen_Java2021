@@ -2,44 +2,28 @@ package com.example.lib;
 
 public class MedidaCO2 {
     //atributos
-    private String tiempo;
-    private double ppmElectronica;
-    private double ppmTelematica;
-    private double ppmAulanueve;
+    private long tiempo;
+    private int ppmElectronica;
+    private int ppmTelematica;
+    private int ppmAulanueve;
 
-    public String getTiempo() {
-        return tiempo;
-    }
-
-    public void setTiempo(String tiempo) {
+    public void setTiempo(long tiempo) {
         this.tiempo = tiempo;
     }
 
-    public double getPpmElectronica() {
-        return ppmElectronica;
-    }
-
-    public void setPpmElectronica(double ppmElectronica) {
+    public void setPpmElectronica(int ppmElectronica) {
         this.ppmElectronica = ppmElectronica;
     }
 
-    public double getPpmTelematica() {
-        return ppmTelematica;
-    }
-
-    public void setPpmTelematica(double ppmTelematica) {
+    public void setPpmTelematica(int ppmTelematica) {
         this.ppmTelematica = ppmTelematica;
     }
 
-    public double getPpmAulanueve() {
-        return ppmAulanueve;
-    }
-
-    public void setPpmAulanueve(double ppmAulanueve) {
+    public void setPpmAulanueve(int ppmAulanueve) {
         this.ppmAulanueve = ppmAulanueve;
     }
 
-    public MedidaCO2( String tiempo, double ppmElectronica, double ppmTelematica, double ppmAulanueve){
+    public MedidaCO2(long tiempo, int ppmElectronica, int ppmTelematica, int ppmAulanueve){
         this.tiempo = tiempo;
         this.ppmElectronica = ppmElectronica;
         this.ppmTelematica = ppmTelematica;
